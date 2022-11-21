@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: python-with-ffmpeg:1.0
+    restart: unless-stopped
+    tty: true
+    working_dir: /app
+    volumes:
+      - .:/app/
